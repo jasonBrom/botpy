@@ -15,6 +15,7 @@ class Interaction:
         "guild_id",
         "channel_id",
         "group_open_id",
+        "group_member_openid",
         "timestamp",
         "version",
     )
@@ -30,7 +31,8 @@ class Interaction:
         self.data = self._Data(data.get("data", {}))
         self.guild_id = data.get("guild_id", None)
         self.channel_id = data.get("channel_id", None)
-        self.group_open_id = data.get("group_open_id", None)
+        self.group_open_id = data.get("group_openid", None)
+        self.group_member_openid = data.get("group_member_openid", None)
         self.timestamp = data.get("timestamp", None)
         self.version = data.get("version", None)
 
